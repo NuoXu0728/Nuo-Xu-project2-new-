@@ -10,5 +10,5 @@ test('should initialize boards with ships', () => {
 });
 
 test('should detect game over state', () => {
-  // Test win condition logic
+  
 });

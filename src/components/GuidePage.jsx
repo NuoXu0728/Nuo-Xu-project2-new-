@@ -4,25 +4,12 @@ import '../index.css'
 
 
 const gameRules = [
-  {
-    id: 'turn',
-    title: '1. Turn-Based',
-    description: 'You and the AI take turns (the player always goes first)'
-  },
-  {
-    id: 'attack',
-    title: '2. Attack Method',
-    descriptions: [
-      "On your turn, select a square on your opponent's grid to attack",
-      "On the AI's turn, it will randomly select a square on your grid"
-    ]
-  },
+
   {
     id: 'results',
-    title: '3. Attack Results',
+    title: 'Attack Results',
     descriptions: [
-      'Hit: 💥 | Miss: 🌊',
-      "The AI won't attack the same position twice, and you cannot select positions you've already attacked"
+      'Hit or Miss: The AI will never strike the same position more than once, and you cannot choose a cell that you’ve already attacked.'
     ]
   }
 ]
@@ -52,7 +39,7 @@ const GuidePage = () => {
     <ul className="vessel-list">
       {vessels.map((vessel, index) => (
         <li key={`vessel-${index}`}>
-          1 {vessel.name} ({vessel.length} cells long)
+          {vessel.name} ({vessel.length} cells)
         </li>
       ))}
     </ul>
@@ -64,33 +51,22 @@ const GuidePage = () => {
 
       <div className="handbook-content">
         <section className="handbook-section">
-          <h2>🎯 Game Objective</h2>
-          <p>Destroy all enemy ships before they eliminate your fleet!</p>
+          <h2>Game</h2>
+          <p>Conquer all enemy ships before your fleet is wiped out!</p>
         </section>
 
         <section className="handbook-section">
-          <h2>🚢 Game Introduction</h2>
+          <h2>Game Introduction</h2>
           <p>
-            Battleship is a two-player board game. In this project, you will battle against a simple
-            AI opponent.
-          </p>
-          <p>
-            The game consists of two 10×10 boards, one representing your battlefield, and one
-            representing the enemy's.
+          Battleship is a classic two-player strategy game. In this version, you’ll be pitted against a simple AI.
           </p>
           <p>At the start of the game, 5 ships are randomly placed on each board:</p>
           {renderVesselList()}
-          <p>Each ship fits entirely on the board and does not overlap with any other ship.</p>
         </section>
 
         <section className="handbook-section">
-          <h2>🎮 Game Rules</h2>
+          <h2>Game Rules</h2>
           <div className="protocol-steps">{gameRules.map(rule => renderRuleItem(rule))}</div>
-        </section>
-
-        <section className="handbook-section">
-          <h2>🏆 Victory Condition</h2>
-          <p>The first player to destroy all of the opponent's ships wins!</p>
         </section>
       </div>
 

@@ -5,11 +5,9 @@ const LeaderboardPage = () => {
   
   const leaderboardData = useMemo(
     () => [
-      { rank: 1, name: 'Admiral Hawkins', score: 2500, date: '2157-03-15' },
-      { rank: 2, name: 'Commander Reynolds', score: 2200, date: '2157-03-14' },
-      { rank: 3, name: 'Captain Nakamura', score: 2100, date: '2157-03-13' },
-      { rank: 4, name: 'Lieutenant Alvarez', score: 2000, date: '2157-03-12' },
-      { rank: 5, name: 'Ensign Chen', score: 1900, date: '2157-03-11' }
+      { rank: 1, name: 'Player1', score: 2500, date: '2157-03-15' },
+      { rank: 2, name: 'Player2', score: 2200, date: '2157-03-14' },
+      { rank: 3, name: 'Player3', score: 2100, date: '2157-03-13' }
     ],
     []
   )
